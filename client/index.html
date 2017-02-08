@@ -1,0 +1,54 @@
+<html ng-app='pedalApp'>
+<head>
+	<title>Pedal Board</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="nav-wrapper has-dropdown">
+      <div class="nav-content">
+        <div class="wrapper">
+          <div class="nav-content-layout">
+            <div class="nav-list">
+
+              <a href="#/"
+              class="list-item"
+              ng-click="selected = 'pedals'"
+              ng-class="{'active': selected == 'pedals'}"> Pedals </a>
+
+              <a href="#/effects"
+              class="list-item"
+              ng-click="selected = 'users'"
+              ng-class="{'active': selected == 'effects'}"> Effects </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+        VIEW TEST {{1+1}}
+      <div ng-view></div>
+    </div>
+
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12">
+                MAIN TEST
+   			<div ng-view></div>
+    		</div>
+    	</div>
+    </div>
+
+	<script src="/client/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/client/bower_components/angular/angular.js"></script>
+	<script src="/client/bower_components/angular-route/angular-route.js"></script>
+	<script src="/client/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/client/app.js"></script>
+    <script src="/client/javascript/routes.js"></script>
+	<script src="/client/javascript/controllers/pedals-controller.js"></script>
+	<script src="/client/javascript/controllers/effects-controller.js"></script>
+</body>
+</html>
